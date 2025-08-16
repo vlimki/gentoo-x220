@@ -3,12 +3,12 @@ app-arch/lz4
 app-crypt/gcr
 app-editors/neovim
 app-eselect/eselect-repository
-app-misc/fastfetch
 app-misc/jq
 app-misc/neofetch
 app-misc/pfetch
 app-misc/screen
 app-portage/cfg-update
+app-portage/genlop
 app-portage/gentoolkit
 app-portage/pfl
 app-shells/dash
@@ -29,10 +29,8 @@ net-misc/chrony
 net-print/cups
 net-wireless/wpa_supplicant
 sys-apps/cpuid
+sys-apps/systemd-utils
 sys-auth/elogind
-sys-boot/grub
-sys-fs/fuse
-sys-fs/fuse:0
 sys-kernel/dracut
 sys-kernel/gentoo-sources:6.15.8
 sys-kernel/linux-firmware
