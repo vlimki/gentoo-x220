@@ -1,1 +1,4 @@
 sys-apps/systemd-utils boot kernel-install
+# required by app-admin/pass-1.7.4-r2::gentoo
+# required by pass (argument)
+>=media-gfx/qrencode-4.1.1-r1 png
