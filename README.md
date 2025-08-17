@@ -11,6 +11,7 @@ There is also an experimental configuration file (`config/linux-*-exp`) right no
 
 ## Kernel config notes
 
+- LUKS support
 - No bluetooth support
 - No touchpad support, trackpoint only
 - No sound card support

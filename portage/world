@@ -32,6 +32,7 @@ sys-power/cpupower
 sys-power/suspend
 sys-power/upower
 sys-process/btop
+www-client/ungoogled-chromium-bin
 www-client/vimb
 x11-apps/setxkbmap
 x11-apps/xinput
