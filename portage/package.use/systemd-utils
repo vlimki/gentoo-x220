@@ -2,3 +2,23 @@ sys-apps/systemd-utils boot kernel-install
 # required by app-admin/pass-1.7.4-r2::gentoo
 # required by pass (argument)
 >=media-gfx/qrencode-4.1.1-r1 png
+# required by dev-texlive/texlive-xetex-2024_p71515::gentoo
+# required by texlive-xetex (argument)
+>=app-text/texlive-core-2024-r1 xetex
+# required by dev-python/matplotlib-3.10.5::gentoo[-test]
+# required by matplotlib (argument)
+>=dev-python/pillow-11.3.0 webp
+# required by dev-python/matplotlib-3.10.5::gentoo[-test]
+# required by matplotlib (argument)
+>=virtual/imagemagick-tools-1 jpeg tiff
+# required by virtual/imagemagick-tools-1::gentoo[-svg]
+# required by dev-python/matplotlib-3.10.5::gentoo[-test]
+# required by matplotlib (argument)
+>=media-gfx/imagemagick-7.1.1.47 jpeg tiff
+# required by dev-python/weasyprint-66.0::gentoo
+# required by weasyprint (argument)
+>=dev-python/pillow-11.3.0 jpeg2k
+# required by net-libs/webkit-gtk-2.48.5-r410::gentoo[gstreamer]
+# required by www-client/vimb-3.7.0::guru
+# required by vimb (argument)
+>=media-libs/gst-plugins-base-1.24.11-r1 opengl

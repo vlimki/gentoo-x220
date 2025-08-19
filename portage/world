@@ -13,10 +13,20 @@ app-portage/gentoolkit
 app-portage/pfl
 app-shells/dash
 app-shells/fish
+app-text/texlive
 app-text/zathura
 app-text/zathura-djvu
 app-text/zathura-pdf-mupdf
+dev-lang/python
+dev-python/matplotlib
+dev-python/numpy
+dev-python/weasyprint
+dev-tex/latexmk
+dev-texlive/texlive-latexextra
+dev-texlive/texlive-luatex
+dev-texlive/texlive-xetex
 dev-vcs/git
+llvm-core/lld
 mail-client/neomutt
 media-fonts/noto-emoji
 media-gfx/feh
@@ -32,8 +42,6 @@ sys-power/cpupower
 sys-power/suspend
 sys-power/upower
 sys-process/btop
-www-client/ungoogled-chromium-bin
-www-client/vimb
 x11-apps/setxkbmap
 x11-apps/xinput
 x11-apps/xrandr
@@ -43,3 +51,4 @@ x11-libs/libXft
 x11-libs/libXinerama
 x11-libs/libxkbcommon
 x11-misc/xclip
+x11-misc/xdg-utils
