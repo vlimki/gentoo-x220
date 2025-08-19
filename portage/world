@@ -13,6 +13,7 @@ app-portage/gentoolkit
 app-portage/pfl
 app-shells/dash
 app-shells/fish
+app-text/texlab
 app-text/texlive
 app-text/zathura
 app-text/zathura-djvu
@@ -20,11 +21,8 @@ app-text/zathura-pdf-mupdf
 dev-lang/python
 dev-python/matplotlib
 dev-python/numpy
-dev-python/weasyprint
 dev-tex/latexmk
 dev-texlive/texlive-latexextra
-dev-texlive/texlive-luatex
-dev-texlive/texlive-xetex
 dev-vcs/git
 llvm-core/lld
 mail-client/neomutt

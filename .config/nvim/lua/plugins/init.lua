@@ -4,7 +4,7 @@ return {
 		event = { "BufReadPost", "BufNewFile" },
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { "lua","vim","bash","python","c","rust" },
+			ensure_installed = { "lua","vim","python","c" },
 			highlight = {
 				enable = true,
 				disable = function(lang, buf)
@@ -23,7 +23,7 @@ return {
 		ft = { "tex" },
 		init = function()
 			vim.g.vimtex_view_method = "zathura"
-			vim.g.vimtex_quickfix_mode = 0	
+			vim.g.vimtex_quickfix_mode = 0
 			vim.g.vimtex_mappings_enabled = 1
 			vim.g.vimtex_complete_enabled = 0
 			vim.g.vimtex_compiler_latexmk = {
@@ -56,15 +56,12 @@ return {
 					},
 				})
 			end
-
 			if vim.fn.executable("clangd") == 1 then
 				lsp.clangd.setup({ on_attach = on_attach, cmd = { "clangd", "--background-index", "--header-insertion=never" } })
 			end
-
 			if vim.fn.executable("pyright-langserver") == 1 then
 				lsp.pyright.setup({ on_attach = on_attach })
 			end
-
 			if vim.fn.executable("lua-language-server") == 1 then
 				lsp.lua_ls.setup({
 					on_attach = on_attach,
@@ -83,7 +80,6 @@ return {
 		end,
 	},
 
-	-- Tiny, fast essentials
 	{ "echasnovski/mini.nvim", version = false, config = function()
 			require("mini.comment").setup()
 			require("mini.surround").setup()

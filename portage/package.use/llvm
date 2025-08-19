@@ -1,3 +1,0 @@
-llvm-core/llvm     LLVM_TARGETS: -* X86
-sys-devel/clang    LLVM_TARGETS: -* X86  CLANG_TARGETS: -* X86
-llvm-core/lld      LLVM_TARGETS: -* X86

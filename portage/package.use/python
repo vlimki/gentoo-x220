@@ -1,1 +1,15 @@
 dev-lang/python:3.13 tk
+
+# required by dev-python/matplotlib-3.10.5::gentoo[-test]
+# required by matplotlib (argument)
+>=dev-python/pillow-11.3.0 webp
+# required by dev-python/matplotlib-3.10.5::gentoo[-test]
+# required by matplotlib (argument)
+>=virtual/imagemagick-tools-1 jpeg tiff
+# required by virtual/imagemagick-tools-1::gentoo[-svg]
+# required by dev-python/matplotlib-3.10.5::gentoo[-test]
+# required by matplotlib (argument)
+>=media-gfx/imagemagick-7.1.1.47 jpeg tiff
+# required by dev-python/weasyprint-66.0::gentoo
+# required by weasyprint (argument)
+>=dev-python/pillow-11.3.0 jpeg2k

@@ -14,7 +14,6 @@ for _, p in ipairs({
   "2html_plugin","matchparen","logiPat","rrhelper","spellfile_plugin","tutor","man"
 }) do vim.g["loaded_"..p] = 1 end
 
-
 local function bigfile(buf)
   local name = vim.api.nvim_buf_get_name(buf)
   if name == "" then return false end
@@ -38,4 +37,3 @@ vim.api.nvim_create_autocmd("BufReadPre", {
 
 vim.opt.laststatus = 3
 vim.o.statusline = " %f %m%r %= %y [%{&ff}] %l/%L:%c "
-

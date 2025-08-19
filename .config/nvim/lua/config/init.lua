@@ -1,8 +1,6 @@
 local o, wo, bo = vim.opt, vim.wo, vim.bo
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
 o.lazyredraw      	= true
 o.updatetime      	= 250
 o.timeoutlen      	= 400
@@ -32,7 +30,6 @@ wo.signcolumn     	= "no"
 
 require("config/colors")
 
--- Spellcheck
 vim.keymap.set("n","<leader>ss", function()
   vim.wo.spell = not vim.wo.spell
 end, { silent = true, desc = "Toggle spell" })
