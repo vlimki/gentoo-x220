@@ -28,6 +28,8 @@ o.foldenable      	= false
 o.conceallevel    	= 2
 wo.signcolumn     	= "no"
 
+vim.cmd("set fillchars+=vert:▕")
+
 require("config/colors")
 
 vim.keymap.set("n","<leader>ss", function()

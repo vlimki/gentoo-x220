@@ -1,3 +1,8 @@
+vim.api.nvim_create_autocmd({ "BufReadPost", "FileType" }, {
+	callback = function(args)
+		pcall(vim.treesitter.stop, args.buf)
+	end
+})
 require("config/lazy")
 
 local o, wo, bo = vim.opt, vim.wo, vim.bo
@@ -37,3 +42,5 @@ vim.api.nvim_create_autocmd("BufReadPre", {
 
 vim.opt.laststatus = 3
 vim.o.statusline = " %f %m%r %= %y [%{&ff}] %l/%L:%c "
+
+vim.o.completeopt = "menu,menuone,noselect"

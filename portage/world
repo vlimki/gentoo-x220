@@ -7,6 +7,7 @@ app-misc/jq
 app-misc/neofetch
 app-misc/pfetch
 app-misc/screen
+app-misc/skim
 app-portage/cfg-update
 app-portage/genlop
 app-portage/gentoolkit
@@ -19,6 +20,7 @@ app-text/zathura
 app-text/zathura-djvu
 app-text/zathura-pdf-mupdf
 dev-lang/python
+dev-lang/rust-bin
 dev-python/matplotlib
 dev-python/numpy
 dev-tex/latexmk
@@ -30,6 +32,8 @@ media-fonts/noto-emoji
 media-gfx/feh
 media-gfx/maim
 net-wireless/wpa_supplicant
+sys-apps/fd
+sys-apps/ripgrep
 sys-apps/systemd-utils
 sys-auth/elogind
 sys-fs/cryptsetup

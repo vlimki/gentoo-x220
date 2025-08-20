@@ -1,4 +1,4 @@
-dev-lang/python:3.13 tk
+>=dev-lang/python-3.13 tk
 
 # required by dev-python/matplotlib-3.10.5::gentoo[-test]
 # required by matplotlib (argument)

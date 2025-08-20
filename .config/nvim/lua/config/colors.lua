@@ -8,6 +8,8 @@ local function hl(group, opts)
 end
 
 local colors = {
+	none = "None",
+
 	black = "#000000",
 	red = "#cd0000",
 	green = "#00cd00",
@@ -25,15 +27,18 @@ hl("Normal", { bg = colors.black })
 hl("Comment", { fg = colors.gray })
 hl("String", { fg = colors.green })
 hl("Number", { fg = colors.magenta })
-hl("Type", { fg = colors.blue })
+hl("Type", { fg = colors.yellow })
 hl("Function", { fg = colors.blue })
 hl("Statement", { fg = colors.magenta })
 hl("Identifier", { fg = colors.blue})
-hl("Special", { fg = "White" })
+hl("Special", { fg = colors.yellow })
 hl("PreProc", { fg = colors.magenta })
 hl("StatusLine", { bg = colors.dark_gray })
-hl("LineNr", { fg = "None", fg = colors.gray })
+hl("LineNr", { fg = colors.none, fg = colors.gray })
 hl("WinSeparator", { fg = colors.gray })
-hl("NonText", { fg = "Black" })
-hl("Pmenu", { fg ="None", bg = colors.dark_gray })
+hl("NonText", { fg = colors.black })
+hl("Pmenu", { bg = colors.dark_gray })
 hl("PmenuSel", { bg = colors.gray })
+hl("DiagnosticWarn", { fg = colors.yellow })
+hl("DiagnosticError", { fg = colors.red })
+hl("DiagnosticHint", { fg = colors.yellow })
