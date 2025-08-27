@@ -8,6 +8,8 @@ return {
 			vim.g.vimtex_mappings_enabled = 1
 			vim.g.vimtex_complete_enabled = 0
 			vim.g.vimtex_compiler_latexmk = {
+				aux_dir = "/tmp/vimtex/aux",
+				out_dir = "/tmp/vimtex/out",
 				options = { "-pdf", "-interaction=nonstopmode", "-file-line-error", "-synctex=1" },
 			}
 		end,

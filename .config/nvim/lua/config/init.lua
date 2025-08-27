@@ -1,6 +1,8 @@
 local o, wo, bo = vim.opt, vim.wo, vim.bo
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
 o.lazyredraw      	= true
 o.updatetime      	= 250
 o.timeoutlen      	= 400
@@ -46,3 +48,26 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 		vim.cmd("0r ~/.config/nvim/template.tex")
 	end,
 })
+
+-- Markdown stuff --
+
+local function md_pdf_paths(buf)
+  local src = vim.api.nvim_buf_get_name(buf)
+  if src == "" then src = vim.fn.expand("%:p") end
+  local pdf = "/tmp/" .. vim.fn.fnamemodify(src, ":t:r") .. ".pdf"
+  return src, pdf
+end
+
+vim.api.nvim_create_user_command("MDPdf", function()
+  if vim.bo.filetype ~= "markdown" and not vim.fn.expand("%:t"):match("%.md$") then return end
+  local src, pdf = md_pdf_paths(0)
+  vim.fn.jobstart({ "pandoc", src, "--pdf-engine=pdflatex", "--pdf-engine-opt=-synctex=1", "-o", pdf }, { detach = true })
+end, { desc = "Compile current Markdown to /tmp PDF" })
+
+vim.api.nvim_create_user_command("MDView", function()
+  local _, pdf = md_pdf_paths(0)
+  vim.fn.jobstart({ "zathura", pdf }, { detach = true })
+end, { desc = "Open /tmp PDF in zathura" })
+
+vim.keymap.set("n","<leader>lr", "<cmd>MDPdf<cr>", {silent=true})
+vim.keymap.set("n","<leader>ll", "<cmd>MDView<cr>", {silent=true})

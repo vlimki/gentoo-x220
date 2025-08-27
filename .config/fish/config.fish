@@ -4,6 +4,9 @@ end
 
 export TERM=xterm-256color
 
+alias tl="tuillama"
+alias sshvd="ssh vlimki@desktop"
+
 fish_vi_key_bindings
 
 function fish_prompt
