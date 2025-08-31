@@ -26,7 +26,6 @@ dev-python/numpy
 dev-tex/latexmk
 dev-texlive/texlive-latexextra
 dev-vcs/git
-llvm-core/lld
 mail-client/neomutt
 media-fonts/noto-emoji
 media-gfx/feh

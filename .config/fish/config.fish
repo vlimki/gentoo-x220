@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 export TERM=xterm-256color
+export EDITOR=nvim
 
 alias tl="tuillama"
 alias sshvd="ssh vlimki@desktop"

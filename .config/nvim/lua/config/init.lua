@@ -65,9 +65,16 @@ vim.api.nvim_create_user_command("MDPdf", function()
 end, { desc = "Compile current Markdown to /tmp PDF" })
 
 vim.api.nvim_create_user_command("MDView", function()
+  if vim.bo.filetype ~= "markdown" and not vim.fn.expand("%:t"):match("%.md$") then return end
   local _, pdf = md_pdf_paths(0)
   vim.fn.jobstart({ "zathura", pdf }, { detach = true })
 end, { desc = "Open /tmp PDF in zathura" })
 
-vim.keymap.set("n","<leader>lr", "<cmd>MDPdf<cr>", {silent=true})
-vim.keymap.set("n","<leader>ll", "<cmd>MDView<cr>", {silent=true})
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function(args)
+		vim.keymap.set("n","<leader>ll", "<cmd>MDView<cr>", {silent=true})
+		vim.keymap.set("n","<leader>lr", "<cmd>MDPdf<cr>", {silent=true})
+	end,
+})
+
