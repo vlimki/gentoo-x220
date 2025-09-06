@@ -1,8 +1,6 @@
 # gentoo-x220
 
-I am running a dual-kernel setup (`config/linux-*-x220` and `config/linux-*-desktop`). The X220 kernel is optimized and tries to be minimal, whereas the desktop kernel is just a stock configuration for now. I use my desktop for compiling packages, which is why I have `-O3` and `-flto` set in `make.conf`.
-
-There is also an experimental configuration file (`config/linux-*-exp`) right now I use for aggressive trimming.
+I am running a dual-kernel setup (`config/linux-*-x220` and `config/linux-*-desktop`). The X220 kernel is optimized and tries to be minimal, whereas the desktop kernel is just a stock configuration for occasioal desktop usage (i.e., package compilation). The X200 kernel is optimized and works on the X220 as well.
 
 ## Features
 
@@ -11,6 +9,7 @@ There is also an experimental configuration file (`config/linux-*-exp`) right no
 
 ## Kernel config notes
 
+- X220 is UEFI-only; X200 is BIOS-only
 - LUKS support
 - No bluetooth support
 - No touchpad support, trackpoint only
@@ -21,5 +20,5 @@ There is also an experimental configuration file (`config/linux-*-exp`) right no
 
 ## TODO
 
-- [ ] Flash coreboot
+- [ ] Flash coreboot/libreboot
 - [x] Switch to systemd-boot from GRUB
